@@ -1,0 +1,9 @@
+{
+    "kosmomod24:DemoPotion": {
+        "NAME": "Awesome Demo Potion",
+        "DESCRIPTIONS": [
+            "Gain #b",
+            " #yStrength."
+        ]
+    }
+}

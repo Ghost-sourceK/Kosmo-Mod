@@ -1,0 +1,27 @@
+[
+  {
+    "PROPER_NAME": "Consume",
+    "NAMES": ["consume", "Consume", "consumed", "Consumed"],
+    "DESCRIPTION": "If this card is Exhausted or Purged, activate the following effect."
+  },
+  {
+    "PROPER_NAME": "Void",
+    "NAMES": ["void", "Void"],
+    "DESCRIPTION": "Draw X cards. If you draw a Kosmo card, gain 1 Energy, this only happens the first time per card. Non-Kosmo cards are Purged upon draw."
+  },
+  {
+    "PROPER_NAME": "Play",
+    "NAMES": ["play"],
+    "DESCRIPTION": "Played cards this way keep the orginal features, so don't play cards that can't be normally played."
+  },
+  {
+    "PROPER_NAME": "Blur",
+    "NAMES": ["blur"],
+    "DESCRIPTION": "Block is not removed at the start of your next turn."
+  },
+  {
+    "PROPER_NAME": "Reshuffle",
+    "NAMES": ["reshuffle"],
+    "DESCRIPTION": "When played shuffle this card into your draw pile."
+  }
+]

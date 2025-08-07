@@ -1,0 +1,7 @@
+{
+  "kosmomod24:Blackhole": {
+    "NAME": "Blackhole",
+    "FLAVOR": "You can use it to eat your garbage.",
+    "DESCRIPTIONS": ["At the start of each combat, draw 1 additional card and exhaust 1 card in your hand."]
+  }
+}

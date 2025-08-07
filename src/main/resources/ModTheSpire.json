@@ -1,0 +1,12 @@
+{
+  "modid": "kosmomod24",
+  "name": "KosmoMod",
+  "author_list": ["Killer"],
+  "description": "Adds the Kosmo character: with cards, relics and potions.",
+  "version": "0.0.1",
+  "sts_version": "12-18-2022",
+  "mts_version": "3.30.0",
+  "credits": "",
+  "dependencies": ["basemod", "stslib"],
+  "update_json": ""
+}

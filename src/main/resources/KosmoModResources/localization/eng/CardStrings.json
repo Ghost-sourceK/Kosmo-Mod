@@ -1,0 +1,65 @@
+{
+  "kosmomod24:Strike_K": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "kosmomod24:Defend_K": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "kosmomod24:KosmoDarkness": {
+    "NAME": "Kosmo Darkness",
+    "DESCRIPTION": "kosmomod24:Void. NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "kosmomod24:Void 2. NL Deal !D! damage."
+  },
+
+  "kosmomod24:VoidParticles": {
+    "NAME": "Void Particles",
+    "DESCRIPTION": "Retain. NL When Exhausted always Purge, NL kosmomod24:Void and Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Retain. NL When Exhausted always Purge, NL kosmomod24:Void !M! and Gain !B! Block."
+  },
+
+  "kosmomod24:KosmoVoid": {
+    "NAME": "Kosmo Void",
+    "DESCRIPTION": "Draw 1 card. NL if you draw a Kosmo card, gain [E]. Non-Kosmo cards are Purged upon draw."
+  },
+  "kosmomod24:DarkMatter": {
+    "NAME": "Dark Matter",
+    "DESCRIPTION": "Unplayable. NL If this card is kosmomod24:Consumed NL gain !B! Block, NL deal !D! damage to a random enemy."
+  },
+  "kosmomod24:KosmoEmergency": {
+    "NAME": "Kosmo Emergency",
+    "DESCRIPTION": "Gain !B! Block. NL Draw 1 random Kosmo card. NL Exhaust."
+  },
+  "kosmomod24:KosmoDelta": {
+    "NAME": "Kosmo Delta",
+    "DESCRIPTION": "kosmomod24:Void. NL Deal !D! damage. NL Exhaust a card in your hand."
+  },
+  "kosmomod24:ForcedRelease": {
+    "NAME": "Forced Release",
+    "DESCRIPTION": "kosmomod24:Void 2. NL Gain !B! Block. NL Exhaust."
+  },
+  "kosmomod24:KosmoExhaustion": {
+    "NAME": "Kosmo Exhaustion",
+    "DESCRIPTION": "kosmomod24:Void. NL Deal !D! damage. NL Enemy loses 1 Strength. NL Exhaust."
+  },
+
+  "kosmomod24:KosmoReturn": {
+    "NAME": "Kosmo Return",
+    "DESCRIPTION": "Deal !D! damage. NL Put a card from your Exhaust pile into your hand."
+  },
+  "kosmomod24:KosmoDuplication": {
+    "NAME": "Kosmo Duplication",
+    "DESCRIPTION": "Autoplay. NL Add !M! *Void *Particles to your hand. NL Exhaust."
+  },
+  "kosmomod24:EchoOfTheVoid": {
+    "NAME": "Echo Of The Void",
+    "DESCRIPTION": "The first time each turn you Exhaust or Purge a card gain 2 Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time each turn you Exhaust or Purge a card gain 2 Strength."
+  },
+
+  "kosmomod24:KosmoGalaxy": {
+    "NAME": "Kosmo Galaxy",
+    "DESCRIPTION": "Deal !D! damage. NL Choose !M! cards from the Exhaust pile to kosmomod24:Play and Purge. NL Exhaust."
+  }
+}
