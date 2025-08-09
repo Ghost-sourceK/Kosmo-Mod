@@ -15,17 +15,21 @@
 
   "kosmomod24:VoidParticles": {
     "NAME": "Void Particles",
-    "DESCRIPTION": "Retain. NL When Exhausted always Purge, NL kosmomod24:Void and Gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "Retain. NL When Exhausted always Purge, NL kosmomod24:Void !M! and Gain !B! Block."
+    "DESCRIPTION": "Retain. NL When kosmomod24:Consumed, NL kosmomod24:Void and Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Retain. NL When kosmomod24:Consumed, NL kosmomod24:Void !M! and Gain !B! Block."
+  },
+  "kosmomod24:MatterAggregation": {
+    "NAME": "Matter Aggregation",
+    "DESCRIPTION": "kosmomod24:Astral. NL When Exhausted or Purge, gain !B! Block and [E]."
   },
 
   "kosmomod24:KosmoVoid": {
     "NAME": "Kosmo Void",
-    "DESCRIPTION": "Draw 1 card. NL if you draw a Kosmo card, gain [E]. Non-Kosmo cards are Purged upon draw."
+    "DESCRIPTION": "Draw 1 card. NL if you draw a Kosmo card, gain [E]. Non-Kosmo cards are Exhausted upon draw."
   },
   "kosmomod24:DarkMatter": {
     "NAME": "Dark Matter",
-    "DESCRIPTION": "Unplayable. NL If this card is kosmomod24:Consumed NL gain !B! Block, NL deal !D! damage to a random enemy."
+    "DESCRIPTION": "Unplayable. NL When kosmomod24:Consumed gain !B! Block, NL deal !M! damage to a random enemy."
   },
   "kosmomod24:KosmoEmergency": {
     "NAME": "Kosmo Emergency",
@@ -33,7 +37,7 @@
   },
   "kosmomod24:KosmoDelta": {
     "NAME": "Kosmo Delta",
-    "DESCRIPTION": "kosmomod24:Void. NL Deal !D! damage. NL Exhaust a card in your hand."
+    "DESCRIPTION": "kosmomod24:Void. NL Deal !D! damage. NL Purge a card in your hand."
   },
   "kosmomod24:ForcedRelease": {
     "NAME": "Forced Release",
@@ -42,6 +46,23 @@
   "kosmomod24:KosmoExhaustion": {
     "NAME": "Kosmo Exhaustion",
     "DESCRIPTION": "kosmomod24:Void. NL Deal !D! damage. NL Enemy loses 1 Strength. NL Exhaust."
+  },
+  "kosmomod24:Meteorite": {
+    "NAME": "Meteorite",
+    "DESCRIPTION": "Deal !D! damage. NL When kosmomod24:Consumed create a copy in the discard pile with damage increased by !M!."
+  },
+  "kosmomod24:KosmoNuclearFusion": {
+    "NAME": "Kosmo Nuclear Fusion",
+    "DESCRIPTION": "Purge a card in your Exhaust pile. Gain [E].",
+    "UPGRADE_DESCRIPTION": "Purge a card in your Exhaust pile. Gain [E] and draw a card."
+  },
+  "kosmomod24:SolarFlux": {
+    "NAME": "Solar Flux",
+    "DESCRIPTION": "kosmomod24:Void. NL Deal !D! damage. NL If the drawn card is Kosmo, apply !M! Vulnerable."
+  },
+  "kosmomod24:KosmoRadiation": {
+    "NAME": "Kosmo Radiation",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak. NL Exhaust 2 random cards from your hand."
   },
 
   "kosmomod24:KosmoReturn": {
@@ -57,9 +78,45 @@
     "DESCRIPTION": "The first time each turn you Exhaust or Purge a card gain 2 Strength.",
     "UPGRADE_DESCRIPTION": "Innate. NL The first time each turn you Exhaust or Purge a card gain 2 Strength."
   },
+  "kosmomod24:FamishedWorldsire": {
+    "NAME": "Famished Worldsire",
+    "DESCRIPTION": "kosmomod24:Excavate !M! cards. Choose !kosmomod24:m2! cards to draw."
+  },
+  "kosmomod24:Pulsar": {
+    "NAME": "Pulsar",
+    "DESCRIPTION": "Purge up to 3 cards in your hand. NL Heal !M! for each card. NL Exhaust."
+  },
+  "kosmomod24:KosmoTroopers": {
+    "NAME": "Kosmo Troopers",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+  },
+  "kosmomod24:Kosmology": {
+    "NAME": "Kosmology",
+    "DESCRIPTION": "kosmomod24:Void. NL Deal !D! damage. NL Shuffle *Void *Particle into your draw pile.",
+    "UPGRADE_DESCRIPTION": "kosmomod24:Void. NL Deal !D! damage. NL Shuffle !M! *Void *Particles into your draw pile."
+  },
+  "kosmomod24:Wormhole": {
+    "NAME": "Wormhole",
+    "DESCRIPTION": "At the start of your turn, add a *Matter *Aggregation into your hand.",
+    "UPGRADE_DESCRIPTION": "kosmomod24:Void. NL At the start of your turn, add a *Matter *Aggregation into your hand."
+  },
 
   "kosmomod24:KosmoGalaxy": {
     "NAME": "Kosmo Galaxy",
     "DESCRIPTION": "Deal !D! damage. NL Choose !M! cards from the Exhaust pile to kosmomod24:Play and Purge. NL Exhaust."
+  },
+  "kosmomod24:KosmoHorizonForm": {
+    "NAME": "Kosmo Horizon Form",
+    "DESCRIPTION": "Ethereal. NL At the start of each turn put a card from your Exhaust pile into your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn put a card from your Exhaust pile into your hand."
+  },
+  "kosmomod24:KosmoSanctuary": {
+    "NAME": "Kosmo Sanctuary",
+    "DESCRIPTION": "This turn, your next Kosmo card is played twice.",
+    "UPGRADE_DESCRIPTION": "This turn, your next 2 Kosmo cards are played twice."
+  },
+  "kosmomod24:Nebula": {
+    "NAME": "Nebula",
+    "DESCRIPTION": "kosmomod24:Graveyard. NL Deal !D! damage. NL When you play a Kosmo card, return into your hand. NL Exhaust."
   }
 }

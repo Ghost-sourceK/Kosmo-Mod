@@ -2,12 +2,27 @@
   {
     "PROPER_NAME": "Consume",
     "NAMES": ["consume", "Consume", "consumed", "Consumed"],
-    "DESCRIPTION": "If this card is Exhausted or Purged, activate the following effect."
+    "DESCRIPTION": "When Exhausted always #yPurge. If this card is Exhausted or Purged, activate the following effect."
   },
   {
     "PROPER_NAME": "Void",
     "NAMES": ["void", "Void"],
-    "DESCRIPTION": "Draw X cards. If you draw a Kosmo card, gain 1 Energy, this only happens the first time per card. Non-Kosmo cards are Purged upon draw."
+    "DESCRIPTION": "Draw X cards. If you draw a Kosmo card, gain 1 Energy, this only happens the first time per card. Non-Kosmo cards are Exhausted upon draw."
+  },
+  {
+    "PROPER_NAME": "Excavate",
+    "NAMES": ["excavate", "Excavate"],
+    "DESCRIPTION": "Look at the top X cards of your draw pile. You may choose X amount, Exhaust the rest."
+  },
+  {
+    "PROPER_NAME": "Graveyard",
+    "NAMES": ["graveyard", "Graveyard"],
+    "DESCRIPTION": "Always start in the Exhaust pile. If it's Purged increased the damage by 50% and return into your hand."
+  },
+  {
+    "PROPER_NAME": "Astral",
+    "NAMES": ["astral"],
+    "DESCRIPTION": "#yPurge this card if it is in your hand at the end of turn. Cards Purged this way do not trigger any effects that activate upon being Purged."
   },
   {
     "PROPER_NAME": "Play",

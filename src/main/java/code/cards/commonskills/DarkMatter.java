@@ -24,17 +24,21 @@ public class DarkMatter extends AbstractEasyCard {
     public DarkMatter() {
         super(ID, -2, TYPE, RARITY, TARGET, COLOR);
 
-        baseBlock = 4;
-        baseDamage = 6;
+        baseBlock = 5;
+        baseMagicNumber = 7;
+        magicNumber = baseMagicNumber;
     }
 
     @Override
     public void triggerOnExhaust() {
+        applyPowers();
         addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
         AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(true);
         if (!randomMonster.isDeadOrEscaped()) {
-            addToTop(new DamageAction(randomMonster, new DamageInfo(AbstractDungeon.player, this.damage, DamageInfo.DamageType.THORNS),AbstractGameAction.AttackEffect.FIRE));
+            addToTop(new DamageAction(randomMonster, new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS),AbstractGameAction.AttackEffect.FIRE));
         }
+        addToBot(new com.megacrit.cardcrawl.actions.utility.WaitAction(0.1F));
+        addToBot(new code.actions.PurgeHelperAction(this));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {}
@@ -45,6 +49,6 @@ public class DarkMatter extends AbstractEasyCard {
 
     public void upp() {
         upgradeBlock(2);
-        upgradeDamage(3);
+        upgradeMagicNumber(4);
     }
 }

@@ -50,9 +50,14 @@ public class KosmoDuplication extends AbstractEasyCard {
         }
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m) {}
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        addToTop(new MakeTempCardInHandAction(new VoidParticles(), this.magicNumber));
+    }
   
     public boolean canUse(AbstractPlayer p, AbstractMonster m) { 
+        if (AbstractDungeon.player.exhaustPile.contains(this)) {
+            return true;
+        }
         return false;
     }
 

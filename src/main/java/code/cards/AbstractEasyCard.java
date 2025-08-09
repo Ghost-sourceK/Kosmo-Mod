@@ -205,12 +205,9 @@ public abstract class AbstractEasyCard extends CustomCard {
     }
 
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upp();
-            if (this.cardStrings.UPGRADE_DESCRIPTION != null) {
-                this.uDesc();
-            }
+        if (!upgraded) {
+            upgradeName();
+            upp();
         }
     }
 

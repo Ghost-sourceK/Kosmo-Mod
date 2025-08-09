@@ -22,7 +22,9 @@ import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.EventStrings;
@@ -32,9 +34,11 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.localization.StanceStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
@@ -44,7 +48,8 @@ public class KosmoMod implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
-        PostInitializeSubscriber {
+        PostInitializeSubscriber,
+        OnStartBattleSubscriber {
 
     public static final String modID = "kosmomod24";
 
@@ -181,8 +186,6 @@ public class KosmoMod implements
         BaseMod.loadCustomStringsFile(EventStrings.class,  "KosmoModResources/localization/" + getLangString() + "/EventStrings.json");
     }
 
-
-
     @Override
     public void receiveEditKeywords() {
         Gson gson = new Gson();
@@ -193,6 +196,34 @@ public class KosmoMod implements
             for (Keyword keyword : keywords) {
                 BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
             }
+        }
+    }
+    
+    @Override
+    public void receiveOnBattleStart(AbstractRoom room) {
+        ArrayList<AbstractCard> nebulas = new ArrayList<>();
+
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+            if (c.cardID.equals(code.cards.rareattacks.Nebula.ID)) {
+                nebulas.add(c);
+            }
+        }
+        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+            if (c.cardID.equals(code.cards.rareattacks.Nebula.ID)) {
+                nebulas.add(c);
+            }
+        }
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            if (c.cardID.equals(code.cards.rareattacks.Nebula.ID)) {
+                nebulas.add(c);
+            }
+        }
+
+        for (AbstractCard nebula : nebulas) {
+            AbstractDungeon.player.drawPile.removeCard(nebula);
+            AbstractDungeon.player.discardPile.removeCard(nebula);
+            AbstractDungeon.player.hand.removeCard(nebula);
+            AbstractDungeon.player.exhaustPile.addToTop(nebula);
         }
     }
 }
