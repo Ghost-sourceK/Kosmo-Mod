@@ -49,7 +49,7 @@
   },
   "kosmomod24:Meteorite": {
     "NAME": "Meteorite",
-    "DESCRIPTION": "Deal !D! damage. NL When kosmomod24:Consumed create a copy in the discard pile with damage increased by !M!."
+    "DESCRIPTION": "Deal !D! damage. NL When kosmomod24:Consumed create a copy in the discard pile with damage NL increased by !M!."
   },
   "kosmomod24:KosmoNuclearFusion": {
     "NAME": "Kosmo Nuclear Fusion",
@@ -64,10 +64,26 @@
     "NAME": "Kosmo Radiation",
     "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak. NL Exhaust 2 random cards from your hand."
   },
+  "kosmomod24:Exoplanet": {
+    "NAME": "Exoplanet",
+    "DESCRIPTION": "Gain !B! Block. NL kosmomod24:Exhume."
+  },
+  "kosmomod24:KosmoEcplisper": {
+    "NAME": "Kosmo Ecplisper",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Exhaust a card in your hand."
+  },
+  "kosmomod24:CosmicRay": {
+    "NAME": "Cosmic Ray",
+    "DESCRIPTION": "Deal !D! damage. NL Shuffle *Matter *Aggregation into your discard pile."
+  },
+  "kosmomod24:QuantumQuasar": {
+    "NAME": "Quantum Quasar",
+    "DESCRIPTION": "kosmomod24:Void. NL Deal !D! damage. NL kosmomod24:Exhume. NL Exhaust."
+  },
 
   "kosmomod24:KosmoReturn": {
     "NAME": "Kosmo Return",
-    "DESCRIPTION": "Deal !D! damage. NL Put a card from your Exhaust pile into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL kosmomod24:Exhume !M!."
   },
   "kosmomod24:KosmoDuplication": {
     "NAME": "Kosmo Duplication",
@@ -75,8 +91,8 @@
   },
   "kosmomod24:EchoOfTheVoid": {
     "NAME": "Echo Of The Void",
-    "DESCRIPTION": "The first time each turn you Exhaust or Purge a card gain 2 Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time each turn you Exhaust or Purge a card gain 2 Strength."
+    "DESCRIPTION": "The first time each turn you Exhaust or Purge a card gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The first time each turn you Exhaust or Purge a card gain 1 Strength."
   },
   "kosmomod24:FamishedWorldsire": {
     "NAME": "Famished Worldsire",
@@ -97,8 +113,15 @@
   },
   "kosmomod24:Wormhole": {
     "NAME": "Wormhole",
-    "DESCRIPTION": "At the start of your turn, add a *Matter *Aggregation into your hand.",
-    "UPGRADE_DESCRIPTION": "kosmomod24:Void. NL At the start of your turn, add a *Matter *Aggregation into your hand."
+    "DESCRIPTION": "At the start of your turn, add a *Matter *Aggregation into your hand."
+  },
+  "kosmomod24:SBSP": {
+    "NAME": "SBSP",
+    "DESCRIPTION": "Unplayable. NL When Exhausted or Purge, NL gain !M! Strength and !M! Dexterity."
+  },
+    "kosmomod24:MechaDestroyer": {
+    "NAME": "Mecha Destroyer",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Exhaust and Purge a card in your hand."
   },
 
   "kosmomod24:KosmoGalaxy": {
@@ -107,8 +130,8 @@
   },
   "kosmomod24:KosmoHorizonForm": {
     "NAME": "Kosmo Horizon Form",
-    "DESCRIPTION": "Ethereal. NL At the start of each turn put a card from your Exhaust pile into your hand.",
-    "UPGRADE_DESCRIPTION": "At the start of each turn put a card from your Exhaust pile into your hand."
+    "DESCRIPTION": "Ethereal. NL At the start of each turn  NL kosmomod24:Exhume and NL Exhaust a card in your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn  NL kosmomod24:Exhume and NL Exhaust a card in your hand."
   },
   "kosmomod24:KosmoSanctuary": {
     "NAME": "Kosmo Sanctuary",

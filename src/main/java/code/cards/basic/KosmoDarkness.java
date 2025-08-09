@@ -24,7 +24,7 @@ public class KosmoDarkness extends AbstractEasyCard {
     public KosmoDarkness() {
         super(ID, 1, TYPE, RARITY, TARGET, COLOR);
         
-        baseDamage = 9;
+        baseDamage = 8;
         baseMagicNumber = 1;
         magicNumber = baseMagicNumber;
         tags.add(KosmoModTags.KOSMO);

@@ -2,12 +2,12 @@ package code.cards.uncommonattacks;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.unique.ExhumeAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import code.KosmoModTags;
+import code.actions.MultipleExhumeAction;
 import code.cards.AbstractEasyCard;
 import code.character.KosmoCharacter;
 import static code.KosmoMod.makeID;
@@ -24,15 +24,18 @@ public class KosmoReturn extends AbstractEasyCard {
         super(ID, 2, TYPE, RARITY, TARGET, COLOR);
         
         baseDamage = 12;
+        baseMagicNumber = 1;
+        magicNumber = baseMagicNumber;
         tags.add(KosmoModTags.KOSMO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SMASH));
-        addToBot(new ExhumeAction(false));
+        addToBot(new MultipleExhumeAction(this.magicNumber));
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(2);
+        upgradeMagicNumber(1);
     }
 }

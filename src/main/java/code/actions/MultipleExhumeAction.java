@@ -9,11 +9,11 @@ import com.megacrit.cardcrawl.core.Settings;
 
 import java.util.ArrayList;
 
-public class RetrieveFromExhaustAction extends AbstractGameAction {
+public class MultipleExhumeAction extends AbstractGameAction {
     private ArrayList<AbstractCard> tempExhumes = new ArrayList<>();
     private AbstractPlayer p;
 
-    public RetrieveFromExhaustAction(int amount) {
+    public MultipleExhumeAction(int amount) {
         this.p = AbstractDungeon.player;
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
@@ -45,6 +45,7 @@ public class RetrieveFromExhaustAction extends AbstractGameAction {
                 this.isDone = true;
                 return;
             }
+            
             for (AbstractCard abstractCard : this.p.exhaustPile.group) {
                 abstractCard.stopGlowing();
                 abstractCard.unhover();

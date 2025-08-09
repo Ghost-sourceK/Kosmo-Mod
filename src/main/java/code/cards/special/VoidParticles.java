@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import code.actions.CheckKosmoTagAction;
+import code.actions.PurgeHelperAction;
 import code.cards.AbstractEasyCard;
 import static code.KosmoMod.makeID;
 
@@ -33,8 +34,7 @@ public class VoidParticles extends AbstractEasyCard {
     public void triggerOnExhaust() {
         addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
         addToBot(new DrawCardAction(this.magicNumber, new CheckKosmoTagAction()));
-        addToBot(new com.megacrit.cardcrawl.actions.utility.WaitAction(0.2F));
-        addToBot(new code.actions.PurgeHelperAction(this));
+        addToBot(new PurgeHelperAction(this));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {}

@@ -3,6 +3,8 @@ package code.cards.power;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import code.KosmoModTags;
 import code.cards.AbstractEasyCard;
 
 import code.character.KosmoCharacter;
@@ -24,6 +26,7 @@ public class KosmoHorizonForm extends AbstractEasyCard {
     baseMagicNumber = 1;
     magicNumber = baseMagicNumber;
     this.isEthereal = true;
+    tags.add(KosmoModTags.KOSMO);
   }
   
   public void use(AbstractPlayer p, AbstractMonster m) {

@@ -21,7 +21,7 @@ public class EchoOfTheVoid extends AbstractEasyCard {
   public EchoOfTheVoid() {
     super(ID, 2, TYPE, RARITY, TARGET, COLOR);
 
-    baseMagicNumber = 2;
+    baseMagicNumber = 1;
     magicNumber = baseMagicNumber;
     this.isInnate = false;
   }

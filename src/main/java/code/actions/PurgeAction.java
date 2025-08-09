@@ -58,7 +58,7 @@ public class PurgeAction extends AbstractGameAction {
                 return;
             }
 
-            AbstractDungeon.handCardSelectScreen.open("Purge", amount, true, false);
+            AbstractDungeon.handCardSelectScreen.open("Purge", amount, true, true);
             this.tickDuration();
             return;
         }

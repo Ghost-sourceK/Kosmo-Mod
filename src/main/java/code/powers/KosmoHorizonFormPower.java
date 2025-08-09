@@ -1,9 +1,10 @@
 package code.powers;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 
-import code.actions.RetrieveFromExhaustAction;
+import code.actions.MultipleExhumeAction;
 
 public class KosmoHorizonFormPower extends LambdaPower {
     public static final String POWER_ID = "KosmoHorizonFormPower";
@@ -17,14 +18,15 @@ public class KosmoHorizonFormPower extends LambdaPower {
     @Override
     public void updateDescription() {
         if(this.amount > 1){
-            this.description = "At the start of your turn, put " + this.amount + " cards from your Exhaust pile into your hand.";
+            this.description = "At the start of your turn, Exhume and Exhaust " + this.amount + " cards.";
         } else {
-            this.description = "At the start of your turn, put " + this.amount + " card from your Exhaust pile into your hand.";
+            this.description = "At the start of your turn, Exhume and Exhaust a card.";
         }
     }
 
     @Override
     public void atStartOfTurnPostDraw() {
-        addToBot(new RetrieveFromExhaustAction(this.amount));
+        addToBot(new MultipleExhumeAction(this.amount));
+        addToBot(new ExhaustAction(1, false));
     }
 }

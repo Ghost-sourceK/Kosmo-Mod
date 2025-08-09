@@ -2,7 +2,6 @@ package code.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 
 import code.cards.special.MatterAggregation;
@@ -23,8 +22,7 @@ public class WormholePower extends LambdaPower {
 
     @Override
     public void atStartOfTurn() {
-        AbstractCard c = new MatterAggregation();
-        addToBot(new MakeTempCardInHandAction(c, this.amount));
+        addToBot(new MakeTempCardInHandAction(new MatterAggregation(), this.amount));
     }
 
 

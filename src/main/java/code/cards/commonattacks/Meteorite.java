@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import code.actions.PurgeHelperAction;
 import code.cards.AbstractEasyCard;
 import code.character.KosmoCharacter;
 import code.vfx.MissileStrikeEffect;
@@ -46,12 +47,10 @@ public class Meteorite extends AbstractEasyCard {
         copy.applyPowers();
         addToBot(new com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction(copy, 1));
 
-        addToBot(new com.megacrit.cardcrawl.actions.utility.WaitAction(0.2F));
-        addToBot(new code.actions.PurgeHelperAction(this));
+        addToBot(new PurgeHelperAction(this));
     }
 
     public void upp() {
-        upgradeDamage(1);
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }

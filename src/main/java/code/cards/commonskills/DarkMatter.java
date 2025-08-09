@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import code.actions.PurgeHelperAction;
 import code.cards.AbstractEasyCard;
 import code.character.KosmoCharacter;
 
@@ -31,14 +32,14 @@ public class DarkMatter extends AbstractEasyCard {
 
     @Override
     public void triggerOnExhaust() {
+        addToBot(new PurgeHelperAction(this));
+        
         applyPowers();
         addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
         AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(true);
         if (!randomMonster.isDeadOrEscaped()) {
             addToTop(new DamageAction(randomMonster, new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS),AbstractGameAction.AttackEffect.FIRE));
         }
-        addToBot(new com.megacrit.cardcrawl.actions.utility.WaitAction(0.1F));
-        addToBot(new code.actions.PurgeHelperAction(this));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {}
