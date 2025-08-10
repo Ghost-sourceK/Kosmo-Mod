@@ -1,7 +1,12 @@
 {
+  "kosmomod24:RedGiant": {
+    "NAME": "Red Giant",
+    "FLAVOR": "A dying star, swollen with unstable power.",
+    "DESCRIPTIONS": ["At the start of each combat, draw 1 additional card and Exhaust 1 card in your hand."]
+  },
   "kosmomod24:Blackhole": {
     "NAME": "Blackhole",
     "FLAVOR": "You can use it to eat your garbage.",
-    "DESCRIPTIONS": ["At the start of each combat, draw 1 additional card and exhaust 1 card in your hand."]
+    "DESCRIPTIONS": ["At the start of each combat and every 2 turns, draw 2 additional cards and you may Exhaust 1 card in your hand."]
   }
 }

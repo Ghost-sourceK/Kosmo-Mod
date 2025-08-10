@@ -12,24 +12,36 @@ public class PurgeAction extends AbstractGameAction {
     private boolean random;
     private AbstractPlayer p;
     private int purgeCount;
+    private boolean anyNumber;
+    private boolean canPickZero;
     private int healPerCard;
 
-    public PurgeAction(int amount, boolean random, int healPerCard) {
+    public PurgeAction(int amount, boolean random, boolean anyNumber, int healPerCard, boolean canPickZero) {
         this.p = AbstractDungeon.player;
         this.amount = amount;
         this.random = random;
+        this.anyNumber = anyNumber;
         this.healPerCard = healPerCard;
+        this.canPickZero = canPickZero;
         this.purgeCount = 0;
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.EXHAUST;
     }
 
+    public PurgeAction(int amount, boolean random, boolean anyNumber, int healPerCard) {
+        this(amount, random, anyNumber, healPerCard, false);
+    }
+
+    public PurgeAction(int amount, boolean random, boolean anyNumber) {
+        this(amount, random, anyNumber, 0, false);
+    }
+
     public PurgeAction(int amount, boolean random) {
-        this(amount, random,0);
+        this(amount, random, false, 0, false);
     }
 
     public PurgeAction(int amount) {
-        this(amount, false,0);
+        this(amount, false, false, 0, false);
     }
 
     @Override
@@ -57,8 +69,8 @@ public class PurgeAction extends AbstractGameAction {
                 this.isDone = true;
                 return;
             }
-
-            AbstractDungeon.handCardSelectScreen.open("Purge", amount, true, true);
+            
+            AbstractDungeon.handCardSelectScreen.open("Purge", amount, anyNumber, canPickZero);
             this.tickDuration();
             return;
         }

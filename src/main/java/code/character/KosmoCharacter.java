@@ -6,7 +6,7 @@ import basemod.animations.SpriterAnimation;
 import code.cards.basic.Defend_K;
 import code.cards.basic.KosmoDarkness;
 import code.cards.basic.Strike_K;
-import code.relics.Blackhole;
+import code.relics.RedGiant;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -82,7 +82,7 @@ public class KosmoCharacter extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(Blackhole.ID);
+        retVal.add(RedGiant.ID);
         return retVal;
     }
 

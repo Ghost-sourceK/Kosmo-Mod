@@ -1,0 +1,36 @@
+package code.relics;
+
+import code.character.KosmoCharacter;
+import static code.KosmoMod.makeID;
+
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustAction;
+
+public class RedGiant extends AbstractEasyRelic {
+    public static final String ID = makeID("RedGiant");
+    private boolean firstTurn = false;
+
+    public RedGiant() {
+        super(ID, RelicTier.STARTER, LandingSound.MAGICAL, KosmoCharacter.Enums.VIOLET);
+    }
+
+    @Override
+    public void atBattleStart() {
+        flash();
+        addToTop(new DrawCardAction(1));
+        firstTurn = true;
+    }
+
+    @Override
+    public void atTurnStartPostDraw() {
+        if (firstTurn) {
+            addToBot(new ExhaustAction(1, false));
+            firstTurn = false;
+        }
+    }
+
+    @Override
+    public void onVictory() {
+        firstTurn = false;
+    }
+}

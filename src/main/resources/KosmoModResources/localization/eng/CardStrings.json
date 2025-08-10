@@ -80,10 +80,32 @@
     "NAME": "Quantum Quasar",
     "DESCRIPTION": "kosmomod24:Void. NL Deal !D! damage. NL kosmomod24:Exhume. NL Exhaust."
   },
+  "kosmomod24:Supernova": {
+    "NAME": "Supernova",
+    "DESCRIPTION": "Gain !B! Block. NL If kosmomod24:Consumed, kosmomod24:Void !M!."
+  },
+  "kosmomod24:KosmoVoyager": {
+    "NAME": "Kosmo Voyager",
+    "DESCRIPTION": "kosmomod24:Void 2. NL Deal !D! damage. NL Purge a card in your hand. NL Exhaust."
+  },
+  "kosmomod24:HyperdriveMode": {
+    "NAME": "Hyperdrive Mode",
+    "DESCRIPTION": "Gain !B! Block. NL Gain [E]. NL Shuffle 2 Dazed into the Discard pile.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain [E] and next turn. NL Shuffle 2 Dazed into the Discard pile."
+  },
+  "kosmomod24:SingularityMealtdown": {
+    "NAME": "Singularity Mealtdown",
+    "DESCRIPTION": "Deal !D! damage. NL kosmomod24:Play and Purge a random card from the Exhaust pile. NL Shuffle !M! Dazed into the Exhaust pile."
+  },
+  "kosmomod24:OrbitalStrike": {
+    "NAME": "Orbital Strike",
+    "DESCRIPTION": "kosmomod24:Void. NL Deal !D! damage twice."
+  },
 
   "kosmomod24:KosmoReturn": {
     "NAME": "Kosmo Return",
-    "DESCRIPTION": "Deal !D! damage. NL kosmomod24:Exhume !M!."
+    "DESCRIPTION": "Deal !D! damage. NL kosmomod24:Exhume.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL kosmomod24:Exhume !M! cards."
   },
   "kosmomod24:KosmoDuplication": {
     "NAME": "Kosmo Duplication",
@@ -123,6 +145,21 @@
     "NAME": "Mecha Destroyer",
     "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block. NL Exhaust and Purge a card in your hand."
   },
+    "kosmomod24:KosmoCrusader": {
+    "NAME": "Kosmo Crusader",
+    "DESCRIPTION": "kosmomod24:Void. NL Deal !D! damage. NL Apply !M! Vulnerable. Apply !M! Weak. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "kosmomod24:Void !M!. NL Deal !D! damage. NL Apply !M! Vulnerable. Apply !M! Weak. NL Exhaust."
+  },
+  "kosmomod24:Hyperleap": {
+    "NAME": "Hyperleap",
+    "DESCRIPTION": "Draw !M! cards. NL Exhaust a card in your hand.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust 2 cards in your hand."
+  },
+  "kosmomod24:KosmoDeflector": {
+    "NAME": "Kosmo Deflector",
+    "DESCRIPTION": "Gain !B! Block. NL Purge 2 random cards in your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Exhaust 2 random cards in your hand."
+  },
 
   "kosmomod24:KosmoGalaxy": {
     "NAME": "Kosmo Galaxy",
@@ -141,5 +178,10 @@
   "kosmomod24:Nebula": {
     "NAME": "Nebula",
     "DESCRIPTION": "kosmomod24:Graveyard. NL Deal !D! damage. NL When you play a Kosmo card, return into your hand. NL Exhaust."
+  },
+    "kosmomod24:Terraforming": {
+    "NAME": "Terraforming",
+    "DESCRIPTION": "At the start of your turn, gain X amount of a random kosmomod24:Buff.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, gain X+1 amount of a random kosmomod24:Buff."
   }
 }

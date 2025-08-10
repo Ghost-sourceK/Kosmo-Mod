@@ -1,28 +1,33 @@
 [
   {
     "PROPER_NAME": "Consume",
-    "NAMES": ["consume", "Consume", "consumed", "Consumed"],
+    "NAMES": ["consume", "consumed", "Consumed"],
     "DESCRIPTION": "When Exhausted always #yPurge. If this card is Exhausted or Purged, activate the following effect."
   },
   {
     "PROPER_NAME": "Void",
-    "NAMES": ["void", "Void"],
+    "NAMES": ["void"],
     "DESCRIPTION": "Draw X cards. If you draw a Kosmo card, gain 1 Energy, this only happens the first time per card. Non-Kosmo cards are Exhausted upon draw."
   },
   {
     "PROPER_NAME": "Excavate",
-    "NAMES": ["excavate", "Excavate"],
+    "NAMES": ["excavate"],
     "DESCRIPTION": "Look at the top X cards of your draw pile. You may choose X amount, Exhaust the rest."
   },
   {
     "PROPER_NAME": "Graveyard",
-    "NAMES": ["graveyard", "Graveyard"],
+    "NAMES": ["graveyard"],
     "DESCRIPTION": "Always start in the Exhaust pile. If it's Purged increased the damage by 50% and return into your hand."
   },
   {
     "PROPER_NAME": "Astral",
     "NAMES": ["astral"],
     "DESCRIPTION": "#yPurge this card if it is in your hand at the end of turn. Cards Purged this way do not trigger any effects that activate upon being Purged."
+  },
+  {
+    "PROPER_NAME": "Buff",
+    "NAMES": ["buff", "Buff", "buffs", "Buffs"],
+    "DESCRIPTION": "Strength, Dexterity, Thorns, Metallicize, Vigor, Plated Armor, Artifact, Regeneration, Blur, Noxious Fumes, Energized, Draw Card Next Turn, Curl Up, Sadistic."
   },
   {
     "PROPER_NAME": "Play",

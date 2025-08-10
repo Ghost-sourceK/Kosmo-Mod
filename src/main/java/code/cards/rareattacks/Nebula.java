@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import code.vfx.GreenEnergyEffect;
+import code.KosmoModTags;
 import code.cards.AbstractEasyCard;
 import code.character.KosmoCharacter;
 import static code.KosmoMod.makeID;
@@ -24,6 +25,7 @@ public class Nebula extends AbstractEasyCard {
         
         baseDamage = 7;
         this.exhaust = true;
+        tags.add(KosmoModTags.GRAVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

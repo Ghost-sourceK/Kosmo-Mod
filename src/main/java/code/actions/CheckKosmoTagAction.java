@@ -52,10 +52,10 @@ public class CheckKosmoTagAction extends AbstractGameAction {
                         addToTop(new GainEnergyAction(1));
 
                         if (canVuln && !target.isDeadOrEscaped()) {
-                            addToTop(new ApplyPowerAction(target, AbstractDungeon.player, new VulnerablePower(target, amount, false), amount));
+                            addToTop(new ApplyPowerAction(target, AbstractDungeon.player, new VulnerablePower(target, amount, false)));
                         }
                         if (canWeak && !target.isDeadOrEscaped()) {
-                            addToTop(new ApplyPowerAction(target, AbstractDungeon.player, new WeakPower(target, amount, false), amount));
+                            addToTop(new ApplyPowerAction(target, AbstractDungeon.player, new WeakPower(target, amount, false)));
                         }
                     }
                 } else {

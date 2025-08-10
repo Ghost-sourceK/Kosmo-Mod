@@ -118,7 +118,7 @@ public abstract class AbstractEasyCard extends CustomCard {
             isSecondDamageModified = (secondDamage != baseSecondDamage);
         } else super.applyPowers();
 
-         if (baseSecondBlock > -1) {
+        if (baseSecondBlock > -1) {
             secondBlock = baseSecondBlock;
 
             int tmp = baseBlock;
