@@ -5,19 +5,33 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 import com.megacrit.cardcrawl.core.Settings;
 
 import java.util.ArrayList;
 
+import code.KosmoModTags;
+import code.cards.AbstractEasyCard;
+
+
+
+
+
 public class MultipleExhumeAction extends AbstractGameAction {
     private ArrayList<AbstractCard> tempExhumes = new ArrayList<>();
     private AbstractPlayer p;
+    private boolean random;
 
-    public MultipleExhumeAction(int amount) {
+    public MultipleExhumeAction(int amount, boolean random) {
         this.p = AbstractDungeon.player;
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
         this.amount = amount;
+        this.random = random;
+    }
+
+    public MultipleExhumeAction(int amount) {
+        this(amount, false);
     }
 
     @Override
@@ -30,18 +44,41 @@ public class MultipleExhumeAction extends AbstractGameAction {
             }
 
             CardGroup exhaustPile = this.p.exhaustPile;
-            if (exhaustPile.isEmpty()) {
+            ArrayList<AbstractCard> validCards = new ArrayList<>();
+
+            for (AbstractCard card : exhaustPile.group) {
+                if (card.hasTag(KosmoModTags.EXIMPOSSIBLE)) {
+                    continue;
+                }
+
+                if (card instanceof AbstractEasyCard) {
+                    if (!((AbstractEasyCard) card).isPurging) {
+                        validCards.add(card);
+                    }
+                } else {
+                    validCards.add(card);
+                }
+            }
+
+            if (validCards.isEmpty()) {
                 this.isDone = true;
                 return;
             }
 
-            if (this.amount >= exhaustPile.size()) {
-                AbstractCard c = this.p.exhaustPile.getTopCard();
-                c.unfadeOut();
-                this.p.hand.addToHand(c);
-                this.p.exhaustPile.removeCard(c);
-                c.unhover();
-                c.fadingOut = false;
+            if (this.amount >= validCards.size()) {
+                for (AbstractCard c : validCards) {
+                    moveToHandFromExhaust(c, false);
+                }
+                this.isDone = true;
+                return;
+            }
+
+            if (random) {
+                for (int i = 0; i < this.amount && !validCards.isEmpty(); i++) {
+                    AbstractCard c = validCards.get(AbstractDungeon.cardRandomRng.random(validCards.size() - 1));
+                    moveToHandFromExhaust(c, true);
+                    validCards.remove(c);
+                }
                 this.isDone = true;
                 return;
             }
@@ -52,14 +89,10 @@ public class MultipleExhumeAction extends AbstractGameAction {
                 abstractCard.unfadeOut();
             }
 
-            if (exhaustPile.isEmpty()) {
-                exhaustPile.group.addAll(tempExhumes);
-                tempExhumes.clear();
-                this.isDone = true;
-                return;
-            }
+            CardGroup selectableGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+            selectableGroup.group.addAll(validCards);
 
-            AbstractDungeon.gridSelectScreen.open(exhaustPile, amount, "Choose cards to retrieve from Exhaust pile", false);
+            AbstractDungeon.gridSelectScreen.open(selectableGroup, amount, "Choose cards to retrieve from Exhaust pile", false);
             tickDuration();
             return;
         }
@@ -84,5 +117,17 @@ public class MultipleExhumeAction extends AbstractGameAction {
         }
 
         tickDuration();
+    }
+
+    private void moveToHandFromExhaust(AbstractCard c, boolean showEffect) {
+        c.unfadeOut();
+        if (showEffect) {
+            AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(c));
+        } else {
+            this.p.hand.addToHand(c);
+        }
+        this.p.exhaustPile.removeCard(c);
+        c.unhover();
+        c.fadingOut = false;  
     }
 }

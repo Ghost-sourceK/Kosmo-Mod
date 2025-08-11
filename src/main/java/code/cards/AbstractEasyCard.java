@@ -47,6 +47,7 @@ public abstract class AbstractEasyCard extends CustomCard {
     private boolean needsArtRefresh = false;
 
     public boolean hasGivenEnergyThisTurn = false;
+    public boolean isPurging = false;
 
     public AbstractEasyCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         this(cardID, cost, type, rarity, target, KosmoCharacter.Enums.VIOLET);

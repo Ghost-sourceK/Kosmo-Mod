@@ -32,8 +32,8 @@ public class KosmoExhaustion extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DrawCardAction(1, new CheckKosmoTagAction()));
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        addToBot(new DrawCardAction(1, new CheckKosmoTagAction()));
         addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -1)));
     }
 

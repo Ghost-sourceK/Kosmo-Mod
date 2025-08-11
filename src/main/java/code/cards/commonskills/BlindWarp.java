@@ -1,46 +1,37 @@
 package code.cards.commonskills;
 
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import code.actions.CheckKosmoTagAction;
-import code.actions.PurgeHelperAction;
+import code.actions.MakeTempCardInExhaustAction;
+import code.actions.MultipleExhumeAction;
 import code.cards.AbstractEasyCard;
 import code.character.KosmoCharacter;
-
 import static code.KosmoMod.makeID;
 
-public class Supernova extends AbstractEasyCard {
-    public final static String ID = makeID("Supernova");
+public class BlindWarp extends AbstractEasyCard {
+    public final static String ID = makeID("BlindWarp");
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = KosmoCharacter.Enums.VIOLET;
 
-    public Supernova() {
-        super(ID, 1, TYPE, RARITY, TARGET, COLOR);
+    public BlindWarp() {
+        super(ID, 0, TYPE, RARITY, TARGET, COLOR);
 
-        baseBlock = 7;
         baseMagicNumber = 2;
         magicNumber = baseMagicNumber;
-    }
-
-    @Override
-    public void triggerOnExhaust() {
-        addToBot(new DrawCardAction(this.magicNumber, new CheckKosmoTagAction()));
-        isPurging = true;
-        addToBot(new PurgeHelperAction(this));
+        this.cardsToPreview = new Dazed();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, p, this.block));
+        addToTop(new MultipleExhumeAction(this.magicNumber, true));
+        addToBot(new MakeTempCardInExhaustAction(new Dazed(), 2));
     }
 
     public void upp() {
-        upgradeBlock(3);
         upgradeMagicNumber(1);
     }
 }

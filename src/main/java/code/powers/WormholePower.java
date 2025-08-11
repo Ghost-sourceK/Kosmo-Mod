@@ -17,7 +17,7 @@ public class WormholePower extends LambdaPower {
 
     @Override
     public void updateDescription() {
-        this.description = "At the start of your turn, add " + this.amount + " *Matter *Aggregation into your hand.";
+        this.description = "At the start of your turn, add " + this.amount + " Matter Aggregation into your hand.";
     }
 
     @Override

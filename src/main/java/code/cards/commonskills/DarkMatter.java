@@ -32,6 +32,7 @@ public class DarkMatter extends AbstractEasyCard {
 
     @Override
     public void triggerOnExhaust() {
+        isPurging = true;
         addToBot(new PurgeHelperAction(this));
         
         applyPowers();

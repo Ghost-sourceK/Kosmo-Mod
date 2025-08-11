@@ -37,10 +37,10 @@ public class KosmoCrusader extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DrawCardAction(this.magicNumber, new CheckKosmoTagAction()));
         addToBot(new VFXAction(new ViceCrushEffect(m.hb.cX, m.hb.cY), 0.4F));
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));
-        addToTop(new ApplyPowerAction(m, p, new VulnerablePower(p, this.magicNumber, false)));
+        addToBot(new DrawCardAction(this.magicNumber, new CheckKosmoTagAction()));
+        addToTop(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false)));
         addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false)));
     }
 

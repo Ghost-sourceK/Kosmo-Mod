@@ -35,8 +35,8 @@ public class Kosmology extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DrawCardAction(1, new CheckKosmoTagAction()));
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        addToBot(new DrawCardAction(1, new CheckKosmoTagAction()));
         addToTop(new MakeTempCardInDrawPileAction(new VoidParticles(), this.magicNumber, true, true, false));
     }
 

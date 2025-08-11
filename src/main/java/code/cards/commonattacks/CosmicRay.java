@@ -6,8 +6,6 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BloodShotEffect;
 
@@ -32,11 +30,7 @@ public class CosmicRay extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (Settings.FAST_MODE) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new BloodShotEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY, 1), 0.25F));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new BloodShotEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY, 1), 0.5F));
-        }
+        addToBot(new VFXAction(new BloodShotEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY, 1), 0.7F));
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         addToBot(new MakeTempCardInDiscardAction(new MatterAggregation(), 1));
     }

@@ -41,7 +41,7 @@
   },
   {
     "PROPER_NAME": "Exhume",
-    "NAMES": ["exhume"],
+    "NAMES": ["exhume", "exhumed", "Exhumed"],
     "DESCRIPTION": "Put a card from your Exhaust pile into your hand."
   },
   {

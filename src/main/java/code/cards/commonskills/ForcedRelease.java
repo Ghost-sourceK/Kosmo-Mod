@@ -27,8 +27,8 @@ public class ForcedRelease extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DrawCardAction(2, new CheckKosmoTagAction()));
         addToBot(new GainBlockAction(p, p, this.block));
+        addToBot(new DrawCardAction(2, new CheckKosmoTagAction()));
     }
 
     public void upp() {

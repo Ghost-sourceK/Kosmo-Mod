@@ -31,8 +31,8 @@ public class KosmoVoyager extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DrawCardAction(2, new CheckKosmoTagAction()));
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        addToBot(new DrawCardAction(2, new CheckKosmoTagAction()));
         addToBot(new PurgeAction(1));
     }
 

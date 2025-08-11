@@ -34,13 +34,13 @@ public class OrbitalStrike extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DrawCardAction(1, new CheckKosmoTagAction()));
         for(int i = 0; i <= 1; i++){
             AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_MAGIC_BEAM_SHORT", 0.5F));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new BorderFlashEffect(Color.SKY)));
             AbstractDungeon.actionManager.addToBottom(new VFXAction(new SmallLaserEffect(m.hb.cX, m.hb.cY, p.hb.cX - 100.0F, p.hb.cY + 550.0F), 0.3F));
             addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE));
         }
+        addToBot(new DrawCardAction(1, new CheckKosmoTagAction()));
     }
 
     public void upp() {

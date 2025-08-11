@@ -25,6 +25,7 @@ public class HyperdriveMode extends AbstractEasyCard {
         super(ID, 1, TYPE, RARITY, TARGET, COLOR);
 
         baseBlock = 5;
+        this.cardsToPreview = new Dazed();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -42,6 +42,7 @@ public class MatterAggregation extends AbstractEasyCard {
             addToBot(new GainEnergyAction(1));
             addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
         } else {
+            isPurging = true;
             addToBot(new PurgeHelperAction(this));
         }
     }

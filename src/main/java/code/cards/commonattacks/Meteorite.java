@@ -47,6 +47,7 @@ public class Meteorite extends AbstractEasyCard {
         copy.applyPowers();
         addToBot(new com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction(copy, 1));
 
+        isPurging = true;
         addToBot(new PurgeHelperAction(this));
     }
 

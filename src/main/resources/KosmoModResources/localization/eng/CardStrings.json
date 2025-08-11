@@ -22,6 +22,11 @@
     "NAME": "Matter Aggregation",
     "DESCRIPTION": "kosmomod24:Astral. NL When Exhausted or Purge, gain !B! Block and [E]."
   },
+  "kosmomod24:DormantStar": {
+    "NAME": "Dormant Star",
+    "DESCRIPTION": "Cannot be kosmomod24:Exhumed. NL kosmomod24:Void. NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Cannot be kosmomod24:Exhumed. NL kosmomod24:Void !M!. NL Deal !D! damage to a random enemy."
+  },
 
   "kosmomod24:KosmoVoid": {
     "NAME": "Kosmo Void",
@@ -101,6 +106,10 @@
     "NAME": "Orbital Strike",
     "DESCRIPTION": "kosmomod24:Void. NL Deal !D! damage twice."
   },
+  "kosmomod24:BlindWarp": {
+    "NAME": "Blind Warp",
+    "DESCRIPTION": "kosmomod24:Exhume !M! random cards. NL Shuffle 2 Dazed into the Exhaust pile."
+  },
 
   "kosmomod24:KosmoReturn": {
     "NAME": "Kosmo Return",
@@ -160,6 +169,20 @@
     "DESCRIPTION": "Gain !B! Block. NL Purge 2 random cards in your hand.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Exhaust 2 random cards in your hand."
   },
+  "kosmomod24:NuclearStrike": {
+    "NAME": "Nuclear Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a random card in your hand. NL Shuffle !M! Dazed into the Exhaust pile. NL Exhaust."
+  },
+  "kosmomod24:PlasmaWave": {
+    "NAME": "Plasma Wave",
+    "DESCRIPTION": "kosmomod24:Play and Purge !M! random cards from the Exhaust pile. NL Shuffle !kosmomod24:m2! Dazed into the Exhaust pile."
+  },
+  "kosmomod24:KosmoStarArchitect": {
+    "NAME": "Kosmo Star Architect",
+    "DESCRIPTION": "At the start of your turn, shuffle a *Dormant *Star into the Exhaust pile.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, shuffle a *Dormant *Star+ into the Exhaust pile."
+  },
+
 
   "kosmomod24:KosmoGalaxy": {
     "NAME": "Kosmo Galaxy",

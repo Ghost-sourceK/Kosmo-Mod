@@ -9,4 +9,7 @@ public class KosmoModTags {
 
     @SpireEnum(name = "GRAVE")
     public static AbstractCard.CardTags GRAVE;
+
+    @SpireEnum(name = "EXIMPOSSIBLE")
+    public static AbstractCard.CardTags EXIMPOSSIBLE;
 }

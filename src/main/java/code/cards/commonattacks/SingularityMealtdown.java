@@ -27,6 +27,7 @@ public class SingularityMealtdown extends AbstractEasyCard {
         baseDamage = 4;
         baseMagicNumber = 3;
         magicNumber = baseMagicNumber;
+        this.cardsToPreview = new Dazed();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
