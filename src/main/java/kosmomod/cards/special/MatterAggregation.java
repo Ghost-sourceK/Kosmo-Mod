@@ -1,0 +1,62 @@
+package kosmomod.cards.special;
+
+import static kosmomod.KosmoMod.makeID;
+
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import kosmomod.actions.PurgeHelperAction;
+import kosmomod.cards.AbstractEasyCard;
+
+public class MatterAggregation extends AbstractEasyCard {
+    public final static String ID = makeID("MatterAggregation");
+
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.SKILL;
+    public static final CardColor COLOR = AbstractCard.CardColor.COLORLESS;
+
+    private boolean endOfTurnExhaust = false;
+
+    public MatterAggregation() {
+        super(ID, -2, TYPE, RARITY, TARGET, COLOR);
+
+        baseBlock = 4;
+        this.exhaust = true;
+        this.isEthereal = true;
+    }
+
+    @Override
+    public void triggerOnEndOfTurnForPlayingCard() {
+        if (this.isEthereal) {
+            endOfTurnExhaust = true;
+        }
+    }
+
+    @Override
+    public void triggerOnExhaust() {
+        if (!endOfTurnExhaust) {
+            addToBot(new GainEnergyAction(1));
+            addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
+            isPurging = true;
+            addToBot(new PurgeHelperAction(this));
+        } else {
+            isPurging = true;
+            addToBot(new PurgeHelperAction(this));
+        }
+    }
+
+    public void use(AbstractPlayer p, AbstractMonster m) {}
+  
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) { 
+        return false;
+    }
+
+    public void upp() {
+        upgradeBlock(2);
+    }
+}

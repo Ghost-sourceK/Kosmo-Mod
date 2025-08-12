@@ -20,12 +20,12 @@
   },
   "kosmomod24:MatterAggregation": {
     "NAME": "Matter Aggregation",
-    "DESCRIPTION": "kosmomod24:Astral. NL When Exhausted or Purge, gain !B! Block and [E]."
+    "DESCRIPTION": "kosmomod24:Astral. NL When kosmomod24:Consumed, gain !B! Block and [E]."
   },
   "kosmomod24:DormantStar": {
     "NAME": "Dormant Star",
-    "DESCRIPTION": "Cannot be kosmomod24:Exhumed. NL kosmomod24:Void. NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "Cannot be kosmomod24:Exhumed. NL kosmomod24:Void !M!. NL Deal !D! damage to a random enemy."
+    "DESCRIPTION": "Cannot be kosmomod24:Exhumed. NL kosmomod24:Void. NL Gain !B! Block. NL Deal !D! damage to a random enemy.",
+    "UPGRADE_DESCRIPTION": "Cannot be kosmomod24:Exhumed. NL kosmomod24:Void !M!. NL Gain !B! Block. NL Deal !D! damage to a random enemy."
   },
 
   "kosmomod24:KosmoVoid": {
@@ -162,7 +162,7 @@
   "kosmomod24:Hyperleap": {
     "NAME": "Hyperleap",
     "DESCRIPTION": "Draw !M! cards. NL Exhaust a card in your hand.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust 2 cards in your hand."
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust !kosmomod24:m2! cards in your hand."
   },
   "kosmomod24:KosmoDeflector": {
     "NAME": "Kosmo Deflector",
@@ -179,8 +179,12 @@
   },
   "kosmomod24:KosmoStarArchitect": {
     "NAME": "Kosmo Star Architect",
-    "DESCRIPTION": "At the start of your turn, shuffle a *Dormant *Star into the Exhaust pile.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, shuffle a *Dormant *Star+ into the Exhaust pile."
+    "DESCRIPTION": "At the end of your turn, shuffle a *Dormant *Star into the Exhaust pile.",
+    "UPGRADE_DESCRIPTION": "At the end of your turn, shuffle a *Dormant *Star+ into the Exhaust pile."
+  },
+  "kosmomod24:KosmoPurifier": {
+    "NAME": "Kosmo Purifier",
+    "DESCRIPTION": "Gain !B! Block. NL Purge !M! Dazed from the Exhaust pile. NL Exhaust."
   },
 
 

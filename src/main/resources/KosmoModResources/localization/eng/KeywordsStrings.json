@@ -42,7 +42,7 @@
   {
     "PROPER_NAME": "Exhume",
     "NAMES": ["exhume", "exhumed", "Exhumed"],
-    "DESCRIPTION": "Put a card from your Exhaust pile into your hand."
+    "DESCRIPTION": "Put a card from your Exhaust pile into your hand. If it's a Status card, Purge it."
   },
   {
     "PROPER_NAME": "Reshuffle",
